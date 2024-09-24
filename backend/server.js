@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/product", productroute);
 
 app.get("/", (req, resp) => {
-	resp.send("Hello");
+	resp.status(200).send("Hello");
 });
 
 app.listen(process.env.PORT, () => {
